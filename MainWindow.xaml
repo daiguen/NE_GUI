@@ -1,0 +1,145 @@
+﻿<Window x:Class="New_Enforce_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:New_Enforce_GUI"
+        mc:Ignorable="d"
+        Icon="Logo.ico"
+        Title="Enforce" Height="800" Width="600" ResizeMode="NoResize" Background="White">
+    <Grid>
+        <DockPanel VerticalAlignment="Top" Height="25">
+            <Menu DockPanel.Dock="Top" Height="25">
+                <Menu.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.99"/>
+                    </LinearGradientBrush>
+                </Menu.Background>
+                <MenuItem Header="File">
+                    <MenuItem Name="newMenuItem" Header="New" InputGestureText="Ctrl+N" Click="NewMenuItem_Click"/>
+                    <MenuItem Name="openMenuItem" Header="Open" InputGestureText="Ctrl+O" Click="OpenMenuItem_Click"/>
+                    <MenuItem Name="saveMenuItem" Header="Save" InputGestureText="Ctrl+S" Click="SaveMenuItem_Click"/>
+                    <MenuItem Header="Save As" Click="SaveAsMenuItem_Click"/>
+                    <Separator/>
+                    <MenuItem Name="exitMenuItem" Header="Exit" InputGestureText="Alt+F4" Click="ExitMenuItem_Click"/>
+                </MenuItem>
+                <MenuItem Header="Help"/>
+            </Menu>
+        </DockPanel>
+        <Image Source="Title.png" Margin="30,50,150,650">
+        </Image>
+        <DockPanel Margin="30,150,30,170">
+            <TabControl DockPanel.Dock="Top">
+                <TabItem Header="Step1">
+                    <StackPanel Margin="10,10,10,10">
+                        <Label Content="Stroke" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="Stroke_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Crank Rotation" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="CrankRot_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="RPM" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="RPM_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="The Number of Cylinders" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="NumCyl_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Firing Order" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="FO_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Bank Angle [deg]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="BankAng_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Step2">
+                    <StackPanel Margin="10,10,10,10">
+                        <Label Content="1st Cylinder Postion [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="fCylPos_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Cylinder Distance [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="CylDis_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Crank Mass per Cylinder [kg]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="CrankMass_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Piston Mass [kg]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="Pmass_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Piston Bore [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="Pbore_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Step3">
+                    <StackPanel Margin="10,10,10,10">
+                        <Label Content="Conrod Mass [kg]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="ConMass_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Conrod Inertia [kg*mm^2]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="ConIner_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Conrod Length [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="ConLen_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Conrod COG [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="ConCOG_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Main Bearing Distance [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="MB_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Step4">
+                    <StackPanel Margin="10,10,10,10">
+                        <Label Content="1st Web Position [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="fWebPos_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Web Distance [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="WebDis_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Web COG [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="WebCOG_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Web Mass [kg]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="WebMass_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Step5">
+                    <Grid>
+                        <DockPanel Height="30" Width="150" Margin="340,365,10,10">
+                            <Button Content="Add" Height="30" Width="70" HorizontalAlignment="Left" Background="WhiteSmoke" FontSize="14" Click="AddButton_Click"/>
+                            <Button Content="Remove" Height="30" Width="70" HorizontalAlignment="Right" Background="WhiteSmoke" FontSize="14" Click="RemoveButton_Click"/>
+                        </DockPanel>
+                        <DockPanel Height="340" Width="480" Margin="10,10,10,50">
+                            <DataGrid Name="CWDataGrid">
+                                
+
+                            </DataGrid>
+                        </DockPanel>
+                    </Grid>                   
+                </TabItem>
+                <TabItem Header="Step6">
+                    <StackPanel Margin="10,10,10,10">
+                        <Label Content="Pressure" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="Press_Val" Height="30" Width="500" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Button Name="AddButton" Content="Open Pressure File" Height="30" Width="200" Margin="3" HorizontalAlignment="Left" FontSize="14" Click="OpenPressureButton_Click"/>
+                        <Button Name="RemoveButton" Content="Run" Height="30" Margin="25" FontSize="20" Click="RunButton_Click"/>
+                    </StackPanel>
+                </TabItem>
+
+            </TabControl>
+        </DockPanel>
+        <TextBox Name="StatusMessagBox"  Background="LightYellow" Margin="30,630,30,50"
+                 ScrollViewer.CanContentScroll="True"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto">
+        </TextBox>
+
+        <DockPanel VerticalAlignment="Bottom" Height="20">
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBar.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="500"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </ItemsPanelTemplate>
+                </StatusBar.ItemsPanel>
+                <StatusBarItem Grid.Column="0">
+                    <TextBlock Name="StatusBarTextBlock"/>
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="1">
+                    <ProgressBar Name="NE_ProgressBar" Value="0" Width="70" Height="12">
+
+                    </ProgressBar>
+                </StatusBarItem>
+            </StatusBar>
+        </DockPanel>
+    </Grid>
+
+
+</Window>
