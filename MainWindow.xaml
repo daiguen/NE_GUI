@@ -33,16 +33,16 @@
             <TabControl DockPanel.Dock="Top">
                 <TabItem Header="Step1">
                     <StackPanel Margin="10,10,10,10">
-                        <Label Content="Stroke" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
-                        <TextBox Name="Stroke_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Stroke Type" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="Stroke_Type_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
                         <Label Content="Crank Rotation" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
                         <TextBox Name="CrankRot_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
                         <Label Content="RPM" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
                         <TextBox Name="RPM_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
                         <Label Content="The Number of Cylinders" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
                         <TextBox Name="NumCyl_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
-                        <Label Content="Firing Order" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
-                        <TextBox Name="FO_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Throw Angle / Firing Order" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="Order_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
                         <Label Content="Bank Angle [deg]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
                         <TextBox Name="BankAng_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
                     </StackPanel>
@@ -81,10 +81,12 @@
                         <TextBox Name="fWebPos_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
                         <Label Content="Web Distance [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
                         <TextBox Name="WebDis_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
-                        <Label Content="Web COG [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
-                        <TextBox Name="WebCOG_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
                         <Label Content="Web Mass [kg]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
                         <TextBox Name="WebMass_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Stroke [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="Stroke_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
+                        <Label Content="Web COG [mm]" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0" FontSize="14"/>
+                        <TextBox Name="WebCOG_Val" Height="30" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3" FontSize="14"/>
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="Step5">

@@ -12,4 +12,3 @@ D:\Project\2020\NEW_ENFORCE\VS\New_Enforce_GUI\New_Enforce_GUI\obj\Release\New_E
 D:\Project\2020\NEW_ENFORCE\VS\New_Enforce_GUI\New_Enforce_GUI\obj\Release\New_Enforce_GUI.csproj.CoreCompileInputs.cache
 D:\Project\2020\NEW_ENFORCE\VS\New_Enforce_GUI\New_Enforce_GUI\obj\Release\New_Enforce_GUI.exe
 D:\Project\2020\NEW_ENFORCE\VS\New_Enforce_GUI\New_Enforce_GUI\obj\Release\New_Enforce_GUI.pdb
-D:\Project\2020\NEW_ENFORCE\VS\New_Enforce_GUI\New_Enforce_GUI\obj\Release\New_Enforce_GUI.csprojAssemblyReference.cache
